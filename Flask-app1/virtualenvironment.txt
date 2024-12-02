@@ -1,0 +1,18 @@
+
+# macOS/Linux
+# You may need to run `sudo apt-get install python3-venv` first on Debian-based OSs
+python3 -m venv .venv
+
+# Windows
+# You can also use `py -3 -m venv .venv`
+python -m venv .venv
+
+. venv/bin/activate
+source .venv/bin/activate(this worked)
+
+pip freeze > requirements.txt
+
+you can manually create requirements.txt  (BEST PRACTICE)
+and write "flask" inside of it with version or not
+
+pip install -r requirements.txt
