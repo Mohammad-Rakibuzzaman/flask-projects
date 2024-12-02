@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Selection</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-header text-center bg-primary text-white">
+                        <h3>Select Your Subjects</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="subjectForm" action="/submit" method="post">
+                            <div class="form-group mb-3">
+                                <label for="datascience" class="form-label">Data Science</label>
+                                <input type="text" class="form-control" id="datascience" name="datascience" placeholder="Enter Data Science notes or score">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="math" class="form-label">Math</label>
+                                <input type="text" class="form-control" id="math" name="math" placeholder="Enter Math notes or score">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="dsa" class="form-label">DSA</label>
+                                <input type="text" class="form-control" id="dsa" name="dsa" placeholder="Enter DSA notes or score">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="cplusplus" class="form-label">C++</label>
+                                <input type="text" class="form-control" id="cplusplus" name="cplusplus" placeholder="Enter C++ notes or score">
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
