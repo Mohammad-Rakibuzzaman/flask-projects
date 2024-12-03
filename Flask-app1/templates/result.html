@@ -7,8 +7,24 @@
     <title>Result</title>
 </head>
 <body>
-    <h2>Final Results</h2>  
-    <h4> The output is: {{ resultd }}
-    </h4>
+    
+   
+
+    <h1>Final Results</h1> 
+    <table border=1>
+        {% for key,value in result.items() %}
+
+        <tr>
+            {# This is the comment sections #}
+            <th>{{ key }}</th>
+            <th>{{ value }}</th>
+        </tr>
+
+
+        {% endfor %}
+    </table>
+
+
+
 </body>
 </html>

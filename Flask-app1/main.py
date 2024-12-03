@@ -1,6 +1,15 @@
 ### Integrate HTML with FLASK (using Jinja tool)
 ### HTTP verb GET and POST
 
+### Jinja2 template engine
+'''
+{%...%} conditions, for statements
+{{ }} exprssions to print output
+{#...} this is for comments
+
+'''
+
+
 from flask import Flask, redirect, url_for, render_template, request # type: ignore
 app = Flask(__name__)
 
@@ -14,11 +23,13 @@ def welcome():
 def passed(marks):
     res = ""
     if marks >= 50:
-        res = "PASSED SUCCESSFULLY."
+        res = "PASSED."
     else:
-        res = "Try Again. You Failed."
+        res = "Failed."
 
-    return render_template('result.html', resultd = res) 
+    storeDb = {'Marks':marks, 'Result':res}
+
+    return render_template('result.html', result = storeDb) 
 
 
 @app.route('/failed/<int:marks>')
